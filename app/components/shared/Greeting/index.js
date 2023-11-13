@@ -8,7 +8,6 @@ const greetings = [
     "Buenas",
     "Ni hao",
     "Olà",
-    "Yassas"
 ]
 
 export const Greeting = () => {

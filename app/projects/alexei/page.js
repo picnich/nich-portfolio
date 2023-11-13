@@ -22,19 +22,20 @@ import styles from './alexei.module.scss'
 export default function ProjectAlexei() {
     // const descriptionTextRef = useRef(null);
 
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useLayoutEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
 
 
-    useEffect( () => {
-        (
-            async () => {
-                const LocomotiveScroll = (await import('locomotive-scroll')).default
-                const locomotiveScroll = new LocomotiveScroll();
-            }
-          )()
-    }, [])
+    // useEffect( () => {
+    //     (
+    //         async () => {
+    //             const LocomotiveScroll = (await import('locomotive-scroll')).default
+    //             const locomotiveScroll = new LocomotiveScroll();
+    //         }
+    //       )()
+    // }, [])
+
     // useEffect(() => {
     //     const context = gsap.context(() => {
     //         enterHeadlineAnimation(descriptionTextRef.current)

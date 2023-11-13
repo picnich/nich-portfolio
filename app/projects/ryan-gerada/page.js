@@ -13,18 +13,18 @@ import styles from './ryan.module.scss'
 
 export default function ProjectRyan() {
 
-    useLayoutEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    // useLayoutEffect(() => {
+    //     window.scrollTo(0, 0);
+    // }, []);
 
-    useEffect( () => {
-    (
-        async () => {
-            const LocomotiveScroll = (await import('locomotive-scroll')).default
-            const locomotiveScroll = new LocomotiveScroll();
-        }
-    )()
-    }, [])
+    // useEffect( () => {
+    // (
+    //     async () => {
+    //         const LocomotiveScroll = (await import('locomotive-scroll')).default
+    //         const locomotiveScroll = new LocomotiveScroll();
+    //     }
+    // )()
+    // }, [])
 
    
     return (

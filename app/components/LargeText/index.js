@@ -2,7 +2,7 @@
 
 import { useEffect, useLayoutEffect, useRef } from 'react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { gsap } from 'gsap'
+import gsap from 'gsap'
 
 import { scrollLargeText } from "./animations"
 import styles from './LargeText.module.scss'
@@ -18,34 +18,10 @@ export const LargeText = ({firstWord, secondWord}) => {
     
         let context = gsap.context(() => {
             scrollLargeText(containerRef.current);
-        }, containerRef)
+        }, comp)
         
         return () => context.revert()
     }, [])
-
-    // useLayoutEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger)
-    
-    //     let context = gsap.context(() => {
-    //         tl.current = gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: 'h2',
-    //                 scrub: true,
-    //                 start: "clamp(bottom 100%)",
-    //                 end: "clamp(bottom 10%)",
-    //                 // markers: true, 
-    //                 // ease: 'linear'
-    //             },
-    //         }).to('h2', { 
-    //             xPercent: -50,
-    //         })
-        
-    //     }, comp)
-        
-    //     return () => context.revert()
-    // }, [])
-
-    // console.log('asdfasdhfjas large text')
 
     return (
         <section className={styles.largeText} ref={comp} >

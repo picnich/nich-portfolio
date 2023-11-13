@@ -6,11 +6,14 @@ import styles from './darkmode.module.css'
 import { Moon, Sun } from "./svg";
 
 export const DarkMode = () => {
-    const [ doc, setDoc ] = useState(null)
-    
-    const [activeTheme, setActiveTheme] = useState('light');
+    const [activeTheme, setActiveTheme] = useState(document.body.dataset.theme);
     const inactiveTheme = activeTheme === "light" ? "dark" : "light";
-    
+  
+    useEffect(() => {
+        const savedTheme = window.localStorage.getItem("theme");
+        savedTheme && setActiveTheme(savedTheme);
+      }, []);
+        
     useEffect(() => {
         document.body.dataset.theme = activeTheme;
         window.localStorage.setItem("theme", activeTheme);
@@ -26,10 +29,6 @@ export const DarkMode = () => {
             onClick={() => setActiveTheme(inactiveTheme)}
             className={styles.theme__trigger}
         >
-            {/* <span activeTheme={activeTheme}></span>
-            <span>🌙</span>
-            <span>☀️</span> */}
-
             {
                 activeTheme === 'dark' ? (
                     // <div className={styles.theme__trigger}>

@@ -39,13 +39,14 @@ export default function RootLayout({ children }) {
           : 'light'
       }
       document.body.dataset.theme = getUserPreference();
+      // document.body.dataset.theme = "light";
     `;
   return (
     <html lang="en">
       <body className={`${roobert.variable} font-sans`}>
         <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
         {children}
-        {/* <Preloader /> */}
+        <Preloader />
         {/* <LenisScroller /> */}
       </body>
     </html>

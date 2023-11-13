@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef } from 'react'
-import { gsap } from "gsap"
+import gsap from "gsap"
 
 import styles from './aboutHero.module.scss'
 import { titleAnimation } from './animations'

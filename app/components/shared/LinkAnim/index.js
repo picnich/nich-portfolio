@@ -1,6 +1,6 @@
 import { victor } from "app/fonts"
 import Link from "next/link"
-import { gsap } from "gsap"
+import gsap from "gsap"
 
 import styles from './linkanim.module.scss'
 import { useState, useEffect, useRef } from "react";

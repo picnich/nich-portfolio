@@ -5,7 +5,14 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 
 import styles from './Navigation.module.scss'
-import { DarkMode } from "../DarkMode"
+// import { DarkMode } from "../DarkMode"
+
+import dynamic from 'next/dynamic'
+ 
+const DynamicDarkMode = dynamic(() =>
+  import('../DarkMode').then((mod) => mod.DarkMode), 
+  {ssr: false}
+)
 
 export const Navigation = ({ showNav = true }) => {
     // const pathname = usePathname();
@@ -13,7 +20,7 @@ export const Navigation = ({ showNav = true }) => {
     return (
         <nav className={styles.navigation}>
             { showNav ? <NavList /> : <GoHome /> }
-            <DarkMode />
+            <DynamicDarkMode />
         </nav>
     )
 }
