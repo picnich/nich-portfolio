@@ -27,6 +27,7 @@ export const ProjectHero = ({ content }) => {
                         height={1200}
                         className={styles.image}
                         alt={"Project Hero Image"}
+                        priority={true}
                     />
                 </div>
             </section>
