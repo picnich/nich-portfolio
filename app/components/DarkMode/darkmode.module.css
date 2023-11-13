@@ -1,0 +1,15 @@
+.theme__trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.theme__trigger__moon svg {
+    stroke: var(--colour-text);
+    stroke-width: 1.5px;
+}
+
+.theme__trigger__sun svg {
+    fill: var(--colour-text) ;
+}

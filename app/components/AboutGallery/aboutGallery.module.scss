@@ -1,0 +1,58 @@
+.aboutGallery {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+    max-width: var(--max-width);  
+    // padding-bottom: 8rem;
+    padding-bottom: clamp(2rem, 8%, 8rem);
+    
+    // margin-top: -25vh;
+    margin-top: clamp(-15%, -25vh,-30vh);
+
+    display: flex;
+    gap: 1rem;
+
+    &__item {
+        position: relative;
+        height: clamp(20vw, 50vh, 40vw);
+        width: clamp(20vw, 50vh, 40vw);
+        border-radius: 1rem;
+        overflow: hidden;
+        flex-shrink: 0;
+
+
+        &:hover > &__caption {
+            opacity: 1;
+        }
+
+        &__caption {
+            z-index: 1;
+            margin: 1rem;
+            border-radius: 0.5rem;
+            background: rgb(80 80 80 / 33%);
+            color: white;
+            padding: 6px 12px;
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: opacity ease-in-out .5s;
+
+            // &:hover {
+            //     opacity: 1;
+            // }
+
+
+            svg {
+                fill: white;
+                margin-right: .5rem;
+            }
+        }
+        &__image {
+            color: inherit;
+            
+        }
+    }
+}

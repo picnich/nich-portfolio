@@ -1,0 +1,46 @@
+.loader {    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colour-text);
+    color: var(--colour-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    
+    svg {
+        width: 100px;
+        height: 100px;
+    }
+
+    &__container {    
+        position: relative;
+        
+        &__outline {
+            stroke: var(--colour-bg);
+            fill: transparent;
+            opacity: 0.5;
+            
+        }
+        &__progress {
+            // animate the stroke-dashoffset for preloader effect
+            stroke: var(--colour-bg);
+            fill: transparent;
+            stroke-width: 2px;
+            stroke-dasharray: 301.592894745;
+            stroke-dashoffset: 301.592894745;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+        &__number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.75rem;
+        }
+    }
+}

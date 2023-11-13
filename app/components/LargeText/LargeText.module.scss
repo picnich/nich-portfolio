@@ -1,0 +1,36 @@
+.largeText {
+    overflow-x: hidden;
+    width: 100%;
+    // background: orange;
+    display: flex;
+    justify-content: left;
+    touch-action: none;
+    pointer-events: none;
+
+    // * {
+    //     touch-action: none;
+    //     pointer-events: none;    
+    // }
+
+
+    h2 {
+        will-change: transform;
+        margin-top: -10vh;
+        // margin-bottom: -12vh;
+        touch-action: none;
+        pointer-events: none;
+        
+        @media screen and (max-width: 768px) {
+            margin-top: -4vh;
+        }
+        span {
+            text-transform: uppercase;
+            // font-size: 50vh;
+            font-size: clamp(25vw, 120px, 50vh);
+
+        }
+        span:first-child {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+.main {
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+
+.section__container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  max-width: var(--max-width);
+}

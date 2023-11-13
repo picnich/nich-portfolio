@@ -1,0 +1,20 @@
+.linkContainer {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+
+    > span:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 105%;
+    }
+
+    span {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+
+    .letter {
+        display: inline;
+    }
+}
