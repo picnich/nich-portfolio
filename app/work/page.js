@@ -23,9 +23,7 @@ export default function WorkPage() {
     
     if (!isLoggedIn) {
       return <PasswordPromptDialog />;
-    } else {
-        console.log('asdfasdf logged in')
-    }
+    } 
  
     return (
     <main className={styles.main}>
