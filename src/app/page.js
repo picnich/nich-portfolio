@@ -32,8 +32,8 @@ export default function Home() {
   }, [])
 
   function handleCompleteAnimation() {
-    // router.push(this.data.link, { scroll: true })
-    router.push(this.data.link)
+    router.push(this.data.link, { scroll: true })
+    // router.push(this.data.link)
   }
 
   return (
