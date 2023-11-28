@@ -19,6 +19,7 @@ export default function SmoothScroller() {
     // Scroll to top if the dependencies change (on pathname/searchParams/lenis change)
     useEffect(() => {
         if (lenis.current) lenis.current.scrollTo(0, { immediate: true });
+        window.scrollTo(0, 0);
         console.log("scroll to top");
     }, [pathname, searchParams, lenis]);
     
