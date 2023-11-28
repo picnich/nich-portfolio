@@ -3,8 +3,11 @@
 import gsap from 'gsap';
 import { CustomEase } from 'gsap/dist/CustomEase';
 // import { SplitText } from 'gsap/dist/SplitText';
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-gsap.registerPlugin(CustomEase);
+
+gsap.registerPlugin(CustomEase, ScrollTrigger, ScrollToPlugin);
 
 const GOLDEN_RATIO = (1 + Math.sqrt(5)) / 2;
 const RECIPROCAL_GR = 1 / GOLDEN_RATIO;
@@ -24,5 +27,5 @@ gsap.defaults({
 });
 
 // Once the desired configurations are set, we simply export what we need to work with in the future.
-export { CustomEase, DURATION, EASE, GOLDEN_RATIO, gsap };
+export { CustomEase, ScrollTrigger,DURATION, EASE, GOLDEN_RATIO, gsap, ScrollToPlugin };
 

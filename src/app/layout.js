@@ -4,6 +4,9 @@ import localFont from 'next/font/local'
 // import './styles/globals.scss'
 import '../styles/globals.scss'
 import { Preloader } from '../components/Preloader'
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import SmoothScroller from "@/lib/smoothScroller";
 // import { LenisScroller } from '@/components/Scroller/lenis-scroller'
 
 
@@ -40,15 +43,23 @@ export default function RootLayout({ children }) {
           : 'light'
       }
       document.body.dataset.theme = getUserPreference();
-      // document.body.dataset.theme = "light";
+      document.body.dataset.theme = 'light';
+      
     `;
   return (
     <html lang="en">
       <body className={`${roobert.variable} font-sans`}>
-        <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+        {/* <Script
+          id="get-theme"
+          dangerouslySetInnerHTML={{
+            __html: setInitialTheme,
+          }}
+        /> */}
+        <Navigation />
         {children}
+        {/* <Footer /> */}
         <Preloader />
-        {/* <LenisScroller /> */}
+        <SmoothScroller />
       </body>
     </html>
   )

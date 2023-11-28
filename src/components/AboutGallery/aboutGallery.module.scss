@@ -6,18 +6,20 @@
     max-width: var(--max-width);  
     // padding-bottom: 8rem;
     padding-bottom: clamp(2rem, 8%, 8rem);
+    padding-top: 4rem;
     
     // margin-top: -25vh;
-    margin-top: clamp(-15%, -25vh,-30vh);
+    // margin-top: clamp(-15%, -25vh,-30vh);
 
-    display: flex;
-    gap: 1rem;
+    // display: flex;
+    // gap: 1rem;
 
     &__item {
         position: relative;
-        height: clamp(20vw, 50vh, 40vw);
-        width: clamp(20vw, 50vh, 40vw);
-        border-radius: 1rem;
+        // height: clamp(20vw, 50vh, 40vw);
+        height: 520px;
+        // width: clamp(20vw, 50vh, 40vw);
+        // border-radius: 1rem;
         overflow: hidden;
         flex-shrink: 0;
 

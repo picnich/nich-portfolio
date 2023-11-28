@@ -27,7 +27,7 @@ export default function WorkPage() {
  
     return (
     <main className={styles.main}>
-        <Navigation />
+        {/* <Navigation /> */}
         <LargeText firstWord={"Work"} secondWord={"Work"}/>
         <AboutGallery />
         <AboutHero />

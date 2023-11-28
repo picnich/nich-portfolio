@@ -1,49 +1,54 @@
-const imagePrefix = '/images/work/tired/project-img__tired-'
-const urlPrefix = '/work/'
-
-export const data = [
-    {
-        name: 'Shop Page',
-        image: `${imagePrefix}01.png`
-    },
-    {
-        name: 'Interactive Splash Screen',
-        image: `${imagePrefix}02.png`
-    },
-    {
-        name: 'Mobile',
-        image: `${imagePrefix}03.png`
-    },
-    {
-        name: 'Detail Page',
-        image: `${imagePrefix}04.png`
-    },
-    {
-        name: 'BG - 2',
-        image: `${imagePrefix}02--bg.png`
-    },
-    {
-        name: 'BG - 3',
-        image: `${imagePrefix}03--bg.png`
-    },
-  
-]
+const projectName = "tired"
+const imagePrefix = `/images/work/${projectName}/`
 
 export const content = {
-    hero: {
-        title: "Tired Labs",
-        tags: [
-            "Web Development"
+    title: "Tired Labs",
+    link: "https://tired.tv/",
+    heroImage: `${imagePrefix}cover_image--${projectName}.png`,
+    projectTypes: [
+        "Web Development"
+    ],
+    projectTools: [
+        "Shopify", 
+        "JS", 
+        "CSS Animations"
+    ], 
+    content: {
+        overview: "Tired Labs, premier lifestyle brand based in Toronto approached me to design & develop their eCommerce experience. The objective was to provide a clean experience and ensure easy navigation while providing flexibility for effortless updates.",
+        development: [
+            "Leveraging the robust and flexible capabilities of Shopify, I developed a responsive storefront using liquid templates, custom JS and css.",
+            "I thoroughly enjoyed the process of crafting the homepage, where I introduced an engaging feature that allows users to interact dynamically with the brand. With each click, an image seamlessly appears at a random position on the screen, forming an overlaid pattern that mirrors the distinctive overlapping style synonymous with the brand's aesthetic."
         ],
-        heroImage: "/images/work/tired/hero__tired.png"
-    }, 
-    description: {
-        description: "The goal was to craft a dynamic eCommerce platform tailored for Tired Labs, a distinctive clothing and lifestyle brand. Leveraging the robust capabilities of Shopify, I developed a site that showcases the brand’s personality without compromising on the shopping experience.", 
-        tags: [
-            "Shopify", 
-            "JS", 
-            "CSS Animations"
-        ], 
-        link: "https://tired.tv/"
-    }
+    },
+    images: [
+        {
+            name: 'Home Mockup',
+            image: `${imagePrefix}${projectName}_img__01.png`
+        },
+        {
+            name: 'Product Photography',
+            image: `${imagePrefix}${projectName}_img__02.png`
+        },
+        {
+            name: 'Mobile Mockup',
+            image: `${imagePrefix}${projectName}_img__03.png`
+        },
+        {
+            name: 'Detail Page',
+            image: `${imagePrefix}${projectName}_img__04.png`
+        },
+        {
+            name: 'Product Photography',
+            image: `${imagePrefix}${projectName}_img__05.png`
+        },
+        {
+            name: 'Homepage Animation',
+            image: `${imagePrefix}${projectName}_img__06.png`
+        },
+        {
+            name: 'Product Photography',
+            image: `${imagePrefix}${projectName}_img__07.png`
+        },
+    ]
+    
 }

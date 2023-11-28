@@ -12,6 +12,7 @@
 
   --colour-bg: #F4F0E6;
   --colour-text: #FF3C01;
+  --colour-formText: #FF3C01;
   
   
   --max-width: 120rem;
@@ -34,6 +35,7 @@ Dark Scheme
   :root {
     --colour-bg: #191919;
     --colour-text: #F4F0E6;
+    --colour-formText: #191919;
 
   }
 }
@@ -42,17 +44,19 @@ body,
 body[data-theme="light"] {
   --colour-bg: #F4F0E6;
   --colour-text: #FF3C01; 
+  --colour-formText: #FF3C01;
 }
 
 body[data-theme="dark"] {
   --colour-bg: #191919;
   --colour-text: #F4F0E6;
+  --colour-formText: #191919;
 }
 
-body {
-  --colour-bg: #F4F0E6;
-  --colour-text: #FF3C01; 
-}
+// body {
+//   --colour-bg: #F4F0E6;
+//   --colour-text: #FF3C01; 
+// }
 
 
 
@@ -81,6 +85,8 @@ body {
   overscroll-behavior: none;
 
   font-family: var(--font-roobert);
+  scrollbar-gutter: stable;
+
   // font-weight: 500;
   
 }
@@ -129,4 +135,21 @@ Lenis
 
 main {
   overflow-x: hidden;
+}
+
+.active__dot {
+  opacity: 1 !important;
+}
+
+.splide__track {
+  overflow: visible !important;
+}
+
+.splide__slide {
+  cursor: grab;
+}
+
+
+.line {
+  overflow-y: hidden;
 }

@@ -1,13 +1,13 @@
 "use client"
 
-import styles from "./workExperience.module.scss"
+import { useEffect, useRef, useState } from "react"
+
+import { gsap, ScrollTrigger } from '@/lib/gsap'
 
 import { experience } from "./data"
-import { useEffect, useRef, useState } from "react"
-import gsap from "gsap";
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
 import { scrollExperience, toggleJob } from "./animations"
+
+import styles from "./workExperience.module.scss"
 
 
 export const WorkExperience = () => {

@@ -3,7 +3,7 @@
 // import { WorkPreviewImage } from 'app/components/WorkGrid'
 import { useEffect, useLayoutEffect, useRef } from 'react'
 
-import gsap from "gsap"
+// import gsap from "gsap"
 // import { ScrollTrigger } from 'gsap/ScrollTrigger'
 // import Image from 'next/image'
 
@@ -13,66 +13,66 @@ import { Footer } from '@/components/Footer'
 import { enterHeadlineAnimation } from '@/components/shared/animations'
 
 import { data, content } from './data'
-import { WorkDescription } from '@/components/WorkDescription'
+// import { WorkDescription } from '@/components/WorkDescription'
 import { ProjectHero } from '@/components/ProjectHero'
-import { WorkImage } from '@/components/WorkImage'
+// import { WorkImage } from '@/components/WorkImage'
+import { ProjectOverview } from '@/components/ProjectOverview'
+import { 
+    IndentedText,
+    ProjectImage, 
+    ProjectRow, 
+    ProjectGridContainer,
+} from '@/components/ProjectContent'
+
+import { gsap, ScrollToPlugin } from "@/lib/gsap"
+
 import styles from './booksluts.module.scss'
 
+
 export default function ProjectBookSluts() {
-    const blurbRef = useRef([]);
 
-    // useLayoutEffect(() => {
-    //     window.scrollTo(0, 0);
-    // }, []);
-
-    // useEffect( () => {
-    // (
-    //     async () => {
-    //         const LocomotiveScroll = (await import('locomotive-scroll')).default
-    //         const locomotiveScroll = new LocomotiveScroll();
-    //     }
-    // )()
-    // }, [])
-
-    useEffect(() => {
-        const context = gsap.context(() => {
-            enterHeadlineAnimation(blurbRef.current)
+    useLayoutEffect(() => {
+        // window.scrollTo(0, 0);
+        let ctx = gsap.context( () => {
+            gsap.set(window, {scrollTo: 0})
         })
 
-        return () => context.revert()
-    }, [])
-    
+        // return ctx.revert()
+    }, []);
 
-   
     return (
         <main className={styles.project}>
-            <ProjectHero content={content.hero} />            
-            <WorkDescription content={content.description} />  
+            <ProjectHero content={content} />            
+            <ProjectOverview content={content}/>
+            
+            <ProjectGridContainer>
+                <ProjectRow projects={[content.images[0], content.images[1]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[2], content.images[3]]} isBigFirst={false} />
+                <ProjectRow projects={[content.images[4], content.images[5]]} isBigFirst={true} />
+            </ProjectGridContainer>
+            
 
-            <section className={styles.project__work}>
-                <div className={styles.project__work__row}>
-                    <WorkImage project={data[0]} />
-                    <WorkImage project={data[1]} />
-                </div>
-                <div className={styles.project__work__row}>
-                    <WorkImage project={data[2]} />
-                    <WorkImage project={data[3]} />
-                </div>
-            </section>
-            <section className={styles.project__work}>
-                <div className={styles.project__work__blurb}>
-                    <h2>Strategy</h2>
-                    <div>
-                        <p ref={text => blurbRef.current.push(text)}>I wanted the brand to be bold and memorable, while also conveying a sense of inclusivity, and community. I drew inspiration from the club's contemporary book selection and created a visual language that with as much sass as the characters in the books we read.</p>
-                        
-                        <p ref={text => blurbRef.current.push(text)}>The web design experience for the website is heavily inspired by print magazines and editorial design. The large contrasting type, big use of white space, horizontal scroll and bold colours are all characteristics I was inspired by when designing the site.</p>
-                    </div>
-                </div>
-                <div className={styles.project__work__row}>
-                    <WorkImage project={data[5]} />
-                    <WorkImage project={data[4]} />
-                </div>
-            </section>
+            <IndentedText 
+                title={"Strategy"}
+                content={content.content.strategy}
+            />
+            
+            <ProjectGridContainer>
+                <ProjectRow projects={[content.images[6], content.images[6]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[7], content.images[8]]} isBigFirst={false} />
+                <ProjectRow projects={[content.images[9], content.images[10]]} isBigFirst={true} />
+            </ProjectGridContainer>
+            
+            <IndentedText 
+                title={"Experience"}
+                content={content.content.experience}
+            />
+
+            <ProjectGridContainer>
+                <ProjectRow projects={[content.images[11], content.images[12]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[13], content.images[14]]} isBigFirst={false} />
+            </ProjectGridContainer>
+            
             <Footer />
         </main>
     )

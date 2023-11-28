@@ -1,10 +1,13 @@
-import gsap from "gsap"
-// import { ScrollTrigger } from "gsap/ScrollTrigger"
+import SplitType from 'split-type'
+import { gsap } from '@/lib/gsap'
 
 export const enterFooterText = (text, links) => {
+    const splitHeadline = new SplitType(text)
+    
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: text,
+            paused: true,
             // start: "top 50%",
             // end: "bottom 10%",
             // markers: true
@@ -12,15 +15,17 @@ export const enterFooterText = (text, links) => {
         },
     });
 
-    tl.from(text, {
+    tl.from(splitHeadline.words, {
         yPercent: 100,
-        stagger: 0.1,
+        stagger: 0.02,
     })
 
     tl.from(links, {
         y: 50,
         stagger: 0.1
     }, "<")
+    
+    tl.play()
 
     return tl;
 }

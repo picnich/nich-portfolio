@@ -10,10 +10,12 @@
     justify-content: space-between;
     z-index: 2;
     position: relative;
+    padding-top: 3rem;
 
     @media screen and (max-width: 768px) {
         padding-left: 1.5rem;
         padding-right: 1.5rem;
+        padding-top: 1rem;
     }
 
     &__wrapper {
@@ -56,6 +58,7 @@
                 width: .25rem;
                 height: .25rem;
                 display: block;
+                opacity: 0;
             }
         
         }

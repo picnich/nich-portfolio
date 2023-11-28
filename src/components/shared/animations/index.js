@@ -1,6 +1,5 @@
 import SplitType from 'split-type'
-import gsap from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap, scrollTrigger } from "@/lib/gsap"
 
 
 gsap.defaults({
@@ -13,7 +12,7 @@ export const enterHeadlineAnimation = (headline) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: headline, 
-            toggleActions: "restart none none none"
+            toggleActions: "restart restart none none",
         }
     })
     
@@ -28,4 +27,14 @@ export const enterHeadlineAnimation = (headline) => {
     return tl
 }
 
-
+export const enterListAnimation = (types, tools) => {
+    const list = document.querySelectorAll('li')
+    return gsap.fromTo(list, {
+        opacity: 0,
+        y: 50,
+        stagger: 2
+    }, {
+        opacity: 1,
+        y: 0
+    })
+}

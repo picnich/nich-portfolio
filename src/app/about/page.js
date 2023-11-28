@@ -26,7 +26,7 @@ export default function AboutPage() {
 
   return (
     <main className={styles.main}>
-      <Navigation />
+      {/* <Navigation /> */}
       <LargeText firstWord={"About"} secondWord={"Me"}/>
       <AboutGallery />
       <AboutHero />

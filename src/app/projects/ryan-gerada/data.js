@@ -1,48 +1,57 @@
-const imagePrefix = '/images/work/ryan/project-img__ryan-'
-const urlPrefix = '/work/'
-
-export const data = [
-    {
-        name: 'Hero',
-        image: `${imagePrefix}01.png`
-    },
-    {
-        name: 'Case Study',
-        image: `${imagePrefix}02.png`
-    },
-    {
-        name: 'Mobile Homepage',
-        image: `${imagePrefix}03.png`
-    },
-    {
-        name: 'Animation',
-        image: `${imagePrefix}04.png`
-    },
-    {
-        name: 'BG - 2',
-        image: `${imagePrefix}02--bg.png`
-    },
-    {
-        name: 'BG - 3',
-        image: `${imagePrefix}03--bg.png`
-    },
-]
+const projectName = "ryan"
+const imagePrefix = `/images/work/${projectName}/`
 
 export const content = {
-    hero: {
-        title: "Ryan Gerada",
-        tags: [
-            "Web Development"
+    title: "Ryan Gerada",
+    link: "https://ryangerada.com/",
+    heroImage: `${imagePrefix}cover_image--${projectName}.png`,
+    projectTypes: [
+        "Web Development"
+    ],
+    projectTools: [
+        "NextJS", 
+        "Contentful", 
+        "Framer-Motion"
+    ], 
+    content: {
+        overview: "Ryan Gerada is a designer based in Toronto and specializing in brand identity, typography and advertising. I was approached develop his online design portfolio, full of thoughtful details and innovative work.",
+        development: [
+            "The site was built using NextJS and uses a Contentful CMS for easy, developer-free updates. We introduced smooth enter animations, noise backgrounds, and hover animations which make Ryan’s portfolio feel polished and keep the user engaged."
         ],
-        heroImage: "/images/work/ryan/hero__ryan.png"
-    }, 
-    description: {
-        description: "The talented Toronto-based Graphic Designer, Ryan Gerada, approached me to redesign his design portfolio. The site was built using NextJS and a custom Contentful CMS for ease. Smooth enter animations, noise backgrounds, and hover animations are all big features which make Ryan’s portfolio feel advanced and highly-polished.", 
-        tags: [
-            "NextJS", 
-            "Contentful", 
-            "Framer-Motion"
-        ], 
-        link: "https://ryangerada.com/"
-    }
+    },
+    images: [
+        {
+            name: 'Home Mockup',
+            image: `${imagePrefix}${projectName}_img__01.png`
+        },
+        {
+            name: 'Project Photography',
+            image: `${imagePrefix}${projectName}_img__02.png`
+        },
+        {
+            name: 'Mobile Mockup',
+            image: `${imagePrefix}${projectName}_img__03.png`
+        },
+        {
+            name: 'Work Hero Animation',
+            image: `${imagePrefix}${projectName}_img__04.png`
+        },
+
+        {
+            name: 'Project Detail',
+            image: `${imagePrefix}${projectName}_img__05.png`
+        },
+        {
+            name: 'Project Design',
+            image: `${imagePrefix}${projectName}_img__06.png`
+        },
+        {
+            name: 'Project Design',
+            image: `${imagePrefix}${projectName}_img__07.png`
+        },
+        {
+            name: 'Tablet Animation',
+            image: `${imagePrefix}${projectName}_img__08.png`
+        },
+    ]
 }

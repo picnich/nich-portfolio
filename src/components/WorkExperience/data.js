@@ -18,15 +18,15 @@ export const experience = [
             "Designed an MVP mobile app for Supply Chain and Logistics company. Designed and developed fully responsive websites while traveling. Oversaw branding identity and product strategy.",
         ]
     },
-    {
-        title: 'UI/UX Designer',
-        company: 'Next Level Lockers',
-        date: '2018 – 2019',
-        location: 'Toronto',
-        desc: [
-            "Designed the MVP of a mobile eCommerce app for Sports celebrities as well as an initial MVP brand and marketing collateral for stakeholders to pitch to investors. Participated in user research sessions and worked closely with Product and Engineering to strategize and translate user feedback into new features and enhancements.",
-        ]
-    },
+    // {
+    //     title: 'UI/UX Designer',
+    //     company: 'Next Level Lockers',
+    //     date: '2018 – 2019',
+    //     location: 'Toronto',
+    //     desc: [
+    //         "Designed the MVP of a mobile eCommerce app for Sports celebrities as well as an initial MVP brand and marketing collateral for stakeholders to pitch to investors. Participated in user research sessions and worked closely with Product and Engineering to strategize and translate user feedback into new features and enhancements.",
+    //     ]
+    // },
     {
         title: 'Art Director',
         company: 'Skrumble Technologies Inc.',

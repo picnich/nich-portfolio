@@ -1,0 +1,51 @@
+.project__overview {
+    padding-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+    max-width: var(--max-width);  
+
+
+    &__container {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        gap: 2rem;
+
+        @media screen and (max-width: 900px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    h6 {
+        margin-bottom: 1rem;
+        font-weight: bold;
+        // font-size: .75rem;
+        font-size: 1.125rem;
+    }
+
+    h2 {
+        font-size: clamp(1.25rem, 2.25vw, 2rem);
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+
+    ul {
+        display: flex;
+        gap: .5rem;
+        margin-bottom: .5rem;
+        overflow-y: hidden;
+
+
+
+        li {
+            border-radius: .5rem;
+            padding: .25rem .66rem;
+            color: var(--colour-text);
+            border: 1px solid var(--colour-text);
+        }
+    }
+
+
+}

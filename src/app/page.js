@@ -1,34 +1,47 @@
 "use client"
 
-import { useEffect } from 'react'
+import { useEffect, useState, useLayoutEffect } from 'react'
+import { useRouter } from 'next/navigation'
+
+import useIsomorphicLayoutEffect from '@/lib/hooks/useIsomorphicLayoutEffect'
+import { gsap } from "@/lib/gsap"
 
 import { Footer } from '../components/Footer'
-import { Navigation } from '../components/Navigation'
-import { LargeText } from '../components/LargeText'
-import { WorkGrid } from '../components/WorkGrid'
 import { Hero } from '../components/HomeHero'
+import { AboutGallery } from '@/components/AboutGallery'
+import { AboutBlurb } from '@/components/AboutBlurb'
+import { WorkExperience } from '@/components/WorkExperience'
+import { WorkSnippet } from '@/components/WorkSnippet'
 
-import styles from './page.module.scss'
-// import { Preloader } from './components/Preloader'
-
+// import styles from './page.module.scss'
 
 export default function Home() {
-    
-  // useEffect( () => {
-  //   (
-  //     async () => {
-  //         const LocomotiveScroll = (await import('locomotive-scroll')).default
-  //         const locomotiveScroll = new LocomotiveScroll();
-  //     }
-  //   )()
-  // }, [])
+  const router = useRouter();
+  const [timeline, setTimeline] = useState(null)
+
+  useEffect(() => {
+      const context = gsap.context(() => {
+          const tl = gsap.timeline({
+              paused: true,
+              onComplete: handleCompleteAnimation,
+          })
+          setTimeline(tl)
+      })
+
+      return () => context.revert()
+  }, [])
+
+  function handleCompleteAnimation() {
+    router.push(this.data.link, { scroll: true })
+  }
 
   return (
-    <main className={styles.main}>
-      <Navigation />
+    <main>
       <Hero />
-      <LargeText firstWord={"Some"} secondWord={"work"}/>
-      <WorkGrid />
+      <AboutGallery />
+      <AboutBlurb />
+      <WorkExperience />
+      <WorkSnippet timeline={timeline} />
       <Footer />
     </main>
   )

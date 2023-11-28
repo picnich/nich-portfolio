@@ -9,36 +9,51 @@ import { MinimalFooter } from '../Footer';
 import useIsomorphicLayoutEffect from '@/lib/hooks/useIsomorphicLayoutEffect';
 
 import { gsap } from '@/lib/gsap'
+import { SplitText } from '@/lib/animations';
 
 export const PasswordPromptDialog = ({ onSubmit }) => {
     const headlineRef = useRef(null);
+    const paraRef = useRef(null);
+    const formRef = useRef(null);
 
     const [password, setPassword] = useState('');
     const [passwordIncorrect, setPasswordIncorrect] = useState(false)
     const [loading, setLoading] = useState(false);
 
     useIsomorphicLayoutEffect(() => {
-        // check if the productRef.current is defined. If it isn't, we return early to avoid errors.
-        if (!headlineRef.current) return
+        const splitTitle = SplitText(headlineRef.current)
+        const splitPara = SplitText(paraRef.current)
 
-        const timeline = gsap.timeline({
-            paused: true,
-            defaults: {
-                ease: 'power4.out'
-            }
-        });
+        const ctx = gsap.context(() => {
+            if (!headlineRef.current) return
 
-        timeline.fromTo(headlineRef.current, {
-            opacity: 0,
-            yPercent: 100,
-        }, {
-            opacity: 1, 
-            yPercent: 0,
+            const timeline = gsap.timeline({
+                paused: true,
+                defaults: {
+                    ease: 'power4.out'
+                }
+            });
+
+            timeline.from(splitTitle.chars, {
+                // opacity: 0,
+                yPercent: 100,
+                stagger: 0.02
+            })
+            timeline.from(splitPara.words, {
+                // opacity: 0,
+                yPercent: 100,
+                stagger: 0.02
+            }, "<")
+            timeline.from(formRef.current, {
+                opacity: 0,
+                yPercent: 20,
+            }, "<")
+
+            timeline.play();
+
         })
 
-        timeline.play();
-
-        return () => timeline.revert()
+        return () => ctx.revert()
 
     }, [])
 
@@ -65,13 +80,18 @@ export const PasswordPromptDialog = ({ onSubmit }) => {
 
 return (
     <main className={styles.main}>
-        <Navigation showNav={false} />
+        {/* <Navigation showNav={false} /> */}
         <section className={styles.passwordDialog}>
             <div className={styles.passwordDialog__content}>
-                <h1 ref={headlineRef}>Password Protected</h1>
-                <p>To see some of my latest design portfolio please provide a password or <a href="mailto:hey@nich.design">request a password</a> here. Otherwise please visit some of my side projects on the <Link href={"/#work__grid"}>homepage.</Link></p>
+                <h1 ref={headlineRef}>Log in</h1>
+                <p ref={paraRef}>Don’t have a password? <a href="mailto:hey@nich.design">Request access</a>
+                </p>
             </div>
-            <form onSubmit={handleSubmit} className={styles.passwordDialog__form} >
+            <form 
+                onSubmit={handleSubmit} 
+                className={styles.passwordDialog__form} 
+                ref={formRef}
+            >
                 {/* <label htmlFor="password">Password:</label> */}
                 <input
                     type="password"

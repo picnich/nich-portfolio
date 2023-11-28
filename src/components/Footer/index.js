@@ -1,61 +1,43 @@
 "use client"
 
 import Link from 'next/link'
-import { useEffect, useLayoutEffect, useRef } from 'react'
-import gsap from "gsap"
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useRef } from 'react'
 
-import { enterFooterText, enterMetaText } from "./animations"
-
-import styles from './Footer.module.scss'
+import { gsap } from '@/lib/gsap'
+import useIsomorphicLayoutEffect from '@/lib/hooks/useIsomorphicLayoutEffect'
+import { SplitAndEnterText } from '@/lib/animations'
 
 import { NavList } from '../Navigation'
-import { LargeText } from '../LargeText'
+
+import { enterFooterText, enterMetaText } from "./animations"
+import styles from './Footer.module.scss'
+
 
 export const Footer = () => {
     const textRef = useRef([])
     const linksRef = useRef([])
+    const headlineRef = useRef(null)
     // const metaTextsRef = useRef([])
 
-    useEffect(() => {
-        gsap.registerPlugin(ScrollTrigger)
+    useIsomorphicLayoutEffect(() => {
+        if (!headlineRef.current) return
         
         let context = gsap.context(() => {
-            enterFooterText(textRef.current, linksRef.current);
+            // SplitAndEnterText(headlineRef.current);
+            enterFooterText(headlineRef.current, linksRef.current);
             // enterMetaText(metaTextsRef.current);
-        }, [textRef, linksRef])
+        }, [textRef, linksRef, headlineRef])
         
         return () => context.revert()
     }, [])
 
-    // useLayoutEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger)
-    //     enterFooterText(textRef.current, linksRef.current);
-    // }, [])
-
     return (
         <>
-            <LargeText firstWord={"Say"} secondWord={"Hey"}/>
             <footer className={styles.footer}>
                 <div className={styles.container}>
-                    {/* <hr /> */}
                     <div className={styles.content}>
-                        <h2 className={styles.content__headline}>
-                            <span className={styles.footer__para__line}>
-                                <span className={styles.footer__para__line__content} ref={ title => textRef.current.push(title) }>
-                                    Thanks for stopping by!
-                                </span>
-                            </span>
-                            <span className={styles.footer__para__line}>
-                                <span className={styles.footer__para__line__content} ref={ title => textRef.current.push(title) }>
-                                    Up to date work available
-                                </span>
-                            </span>
-                            <span className={styles.footer__para__line}>
-                                <span className={styles.footer__para__line__content} ref={ title => textRef.current.push(title) }>
-                                    upon request.
-                                </span>
-                            </span>
+                        <h2 className={styles.content__headline} ref={headlineRef}>
+                            Thanks for stopping by! <br />Up to date work available <br />upon request.
                         </h2>
                         <ul className={styles.contactLinks}>
                             <li ref={(link) => linksRef.current.push(link)}>
@@ -76,18 +58,6 @@ export const Footer = () => {
                                 <path d="M5.33333 15L13.3333 6.99996V14.1666H15V4.16663H5V5.83329H12.1667L4.16667 13.8333L5.33333 15Z" />
                                 </svg>
                             </li>
-                            {/* <li ref={(link) => linksRef.current.push(link)}>
-                                <a target="_blank" href="https://www.linkedin.com/in/nichp/">Twitter</a>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.33333 15L13.3333 6.99996V14.1666H15V4.16663H5V5.83329H12.1667L4.16667 13.8333L5.33333 15Z" />
-                                </svg>
-                            </li>
-                            <li ref={(link) => linksRef.current.push(link)}>
-                                <a target="_blank" href="https://www.linkedin.com/in/nichp/">CV</a>
-                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M5.33333 15L13.3333 6.99996V14.1666H15V4.16663H5V5.83329H12.1667L4.16667 13.8333L5.33333 15Z" />
-                                </svg>
-                            </li> */}
                         </ul>
                     </div>
                     <MinimalFooter />
@@ -102,12 +72,9 @@ export const MinimalFooter = () => {
 
     const metaTextsRef = useRef([])
 
-    // useEffect(() => {
-    //     gsap.registerPlugin(ScrollTrigger)
-    // }, [])
-
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         const context = gsap.context(() => {
+            if (!metaTextsRef.current) return 
             enterMetaText(metaTextsRef.current);
         })
         return () => context.revert()
@@ -127,7 +94,7 @@ export const MinimalFooter = () => {
                 <NavList />
             </div>
             <div className={styles.footer__meta__designed} ref={text => metaTextsRef.current.push(text)}>
-                Site Designed and Developed by <Link href="/about"> <span className={styles.me}>your boy.</span></Link>
+                Site Designed and Developed by your boy.
             </div>
         </div>
     

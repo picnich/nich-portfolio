@@ -1,13 +1,11 @@
 "use client"
 
 import Link from "next/link"
-
+import dynamic from 'next/dynamic'
 import { usePathname } from "next/navigation"
 
 import styles from './Navigation.module.scss'
 // import { DarkMode } from "../DarkMode"
-
-import dynamic from 'next/dynamic'
  
 const DynamicDarkMode = dynamic(() =>
   import('../DarkMode').then((mod) => mod.DarkMode), 
@@ -37,7 +35,7 @@ export const NavList = () => {
             </li> */}
 
             <NavItem name="Home" href="/" isCurrent={pathname === '/'} />
-            <NavItem name="About" href="/about" isCurrent={pathname === '/about'} />
+            {/* <NavItem name="About" href="/about" isCurrent={pathname === '/about'} /> */}
             <NavItem name="Work" href="/work" isCurrent={pathname === '/work'} />
         </ul>
 
@@ -51,9 +49,7 @@ const NavItem = ({ name, href, isCurrent }) => {
     return (
         <li className={styles.navigation__link}>
             <Link className={`${isCurrent ? `${styles.active}` : ''}`} href={href}>{name}</Link>
-            {
-                isCurrent && <div className={styles.navigation__link__dot}></div>
-            }
+            <div className={`${styles.navigation__link__dot} ${isCurrent ? 'active__dot' : ''}`}></div>
         </li>
     )
 }
