@@ -6,7 +6,7 @@ export const experience = [
         location: 'Remote',
         desc: [
             "Designed and prototyped end-to-end product experiences and features for a multitude of small-to-medium, venture-backed companies. Working closely with product, engineering, and marketing stakeholders, I ensured that each project reflected business objectives in a way that maximized user engagement and drove success. I primarily designed for the web (marketing/sales websites and web-based apps), but also across touchpoints like branding, mobile, and web development (mostly Webflow-based).",
-            "As the first hire at the company I’ve had my hand in the majority of the 150+ client’s we’ve worked with. One of the most notable things I've enjoyed working at Catalog is seeing how the team has grown (now at 15+) as well as working with clients across 10+ industries - including consumer products, lifestyle, education, social media, financial services, and transportation."
+            "As the first hire at the company I’ve had my hand in the majority of the 50+ client’s we’ve worked with. One of the most notable things I've enjoyed working at Catalog is seeing how the team has grown (now at 15+) as well as working with clients across 10+ industries - including consumer products, lifestyle, education, social media, financial services, and transportation."
         ]
     },
     {
