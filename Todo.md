@@ -12,17 +12,17 @@ Work
 - [] Logged In
 
 Detail Pages
-- [] Hero 
-- [] Description
-- [] Image Grid
-- [] Strategy
+- [x] Hero 
+- [x] Description
+- [x] Image Grid
+- [x] Strategy
 
 Other: 
 - [x] Lenis Scroll
-- [] Page Transition from Detail pages
+- [x] Page Transition from Detail pages
 - [x] Navigation
 - [] Include Server code in /Work/* and move 3 pieces of work into Project
-- 
+- [] Delete old images/projects 
 
 
 

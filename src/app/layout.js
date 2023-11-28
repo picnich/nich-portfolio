@@ -49,16 +49,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${roobert.variable} font-sans`}>
-        {/* <Script
+        <Script
           id="get-theme"
           dangerouslySetInnerHTML={{
             __html: setInitialTheme,
           }}
-        /> */}
-        <Navigation />
+        />
+        {/* <Navigation /> */}
         {children}
         {/* <Footer /> */}
-        <Preloader />
+        {/* <Preloader /> */}
         <SmoothScroller />
       </body>
     </html>
