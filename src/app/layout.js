@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
             __html: setInitialTheme,
           }}
         />
-        {/* <Navigation /> */}
+        <Navigation />
         {children}
         {/* <Footer /> */}
         {/* <Preloader /> */}
