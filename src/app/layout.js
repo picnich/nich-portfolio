@@ -1,5 +1,3 @@
-"use client"
-
 import Script from "next/script";
 import localFont from 'next/font/local'
 
@@ -29,10 +27,10 @@ const roobert = localFont({
   variable: '--font-roobert',
 })
 
-// export const metadata = {
-//   title: 'Nich | Product Designer',
-//   description: 'Designed and Developed in Toronto, On',
-// }
+export const metadata = {
+  title: 'Nich | Product Designer',
+  description: 'Product Designer and Developer from Toronto, CA',
+}
 
 
 export default function RootLayout({ children }) {
@@ -62,7 +60,7 @@ export default function RootLayout({ children }) {
         {children}
         {/* <Footer /> */}
         {/* <Preloader /> */}
-        <SmoothScroller />
+        {/* <SmoothScroller /> */}
       </body>
     </html>
   )

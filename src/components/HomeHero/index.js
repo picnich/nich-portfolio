@@ -23,7 +23,7 @@ export const Hero = () => {
     return (
         <section className={styles.homeHero}>
             <h1 ref={headlineRef}>
-                Heya, I’m Nich 👋 I’m a Product Designer that loves <br />designing apps, experiences and everything in <br />between for forward-thinking businesses.
+                Heya, I’m Nich 👋 I’m a Product Designer & Developer that <br />loves designing apps, experiences and everything in <br />between for forward-thinking businesses.
             </h1>
         </section>
     )
