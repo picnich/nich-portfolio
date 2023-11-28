@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 export const LenisScroller = () => {
   const lenis = useRef(null);
   const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams();  
   
   // Scroll to top if the dependencies change (on pathname/searchParams/lenis change)
   useEffect(() => {

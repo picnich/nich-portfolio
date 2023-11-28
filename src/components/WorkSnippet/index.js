@@ -107,7 +107,7 @@ export const WorkSnippet = ({ timeline, setNextUrl }) => {
         
         // Tell animation what item was clicked
         setClickedIndex(nextIndex)
-        console.log('Starting animation 1/2')
+        // console.log('Starting animation 1/2')
 
         timeline.data = proj
         timeline.play() 

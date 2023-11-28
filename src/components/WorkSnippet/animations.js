@@ -68,7 +68,7 @@ export const animOutWorkItems = (title, clickedIndex) => {
     // if (clickedIndex === null) return 
     // if (!clickedIndex) return 
 
-    console.log('Starting animation 2/2', clickedIndex)
+    // console.log('Starting animation 2/2', clickedIndex)
 
     const items = gsap.utils.toArray('.work__item')
     const clickedItem = items[clickedIndex]

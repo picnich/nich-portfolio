@@ -14,14 +14,17 @@ export default function SmoothScroller() {
     const lenis = useRef(null);
     const pathname = usePathname();
     const searchParams = useSearchParams();
-
+    console.log("Start Smooth Scroller out of useeffect");
+    
     // Scroll to top if the dependencies change (on pathname/searchParams/lenis change)
     useEffect(() => {
         if (lenis.current) lenis.current.scrollTo(0, { immediate: true });
+        console.log("scroll to top");
     }, [pathname, searchParams, lenis]);
-
+    
     useEffect(() => {
         const lenis = new Lenis();
+        console.log("Start Smooth Scroller");
 
         // lenis.on('scroll', (e) => {
         //     console.log(e);

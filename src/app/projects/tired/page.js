@@ -22,7 +22,7 @@ import styles from './tired.module.scss'
 export default function ProjectTired() {
 
     useLayoutEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         let ctx = gsap.context( () => {
             gsap.set(window, {scrollTo: 0})
         })

@@ -32,7 +32,7 @@ import styles from './booksluts.module.scss'
 export default function ProjectBookSluts() {
 
     useLayoutEffect(() => {
-        // window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         let ctx = gsap.context( () => {
             gsap.set(window, {scrollTo: 0})
         })
