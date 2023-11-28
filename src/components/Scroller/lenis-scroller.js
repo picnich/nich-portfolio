@@ -1,7 +1,7 @@
 "use client";
 import Lenis from "@studio-freight/lenis";
 import { usePathname, useSearchParams } from 'next/navigation';
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export const LenisScroller = () => {
   const lenis = useRef(null);

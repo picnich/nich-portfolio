@@ -11,7 +11,7 @@ import useIsomorphicLayoutEffect from '../hooks/useIsomorphicLayoutEffect';
  * Wrapper for Lenis
  */
 export default function SmoothScroller() {
-    const lenis = useRef<Lenis | null>(null);
+    const lenis = useRef(null);
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
