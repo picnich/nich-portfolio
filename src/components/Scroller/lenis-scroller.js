@@ -11,6 +11,7 @@ export const LenisScroller = () => {
   // Scroll to top if the dependencies change (on pathname/searchParams/lenis change)
   useEffect(() => {
       if (lenis.current) lenis.current.scrollTo(0, { immediate: true });
+      console.log('Scroll to top');
   }, [pathname, searchParams, lenis]);
 
   useEffect(() => {

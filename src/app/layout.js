@@ -1,3 +1,5 @@
+"use client"
+
 import Script from "next/script";
 import localFont from 'next/font/local'
 
@@ -7,6 +9,7 @@ import { Preloader } from '../components/Preloader'
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import SmoothScroller from "@/lib/smoothScroller";
+import Lenify from "@/components/Scroller/lenis-provider";
 // import { LenisScroller } from '@/components/Scroller/lenis-scroller'
 
 
@@ -26,10 +29,10 @@ const roobert = localFont({
   variable: '--font-roobert',
 })
 
-export const metadata = {
-  title: 'Nich | Product Designer',
-  description: 'Designed and Developed in Toronto, On',
-}
+// export const metadata = {
+//   title: 'Nich | Product Designer',
+//   description: 'Designed and Developed in Toronto, On',
+// }
 
 
 export default function RootLayout({ children }) {
