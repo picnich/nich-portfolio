@@ -46,8 +46,8 @@ export default function ProjectTired() {
             />
             
             <ProjectGridContainer>
-                <ProjectRow projects={[content.images[4], content.images[4]]} isBigFirst={true} />
-                <ProjectRow projects={[content.images[5], content.images[6]]} isBigFirst={false} />
+                <ProjectRow projects={[content.images[4], content.images[5]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[6], content.images[7]]} isBigFirst={false} />
             </ProjectGridContainer>
 
             <Footer />

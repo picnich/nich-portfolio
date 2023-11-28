@@ -37,9 +37,14 @@ export const content = {
             name: 'Detail Page',
             image: `${imagePrefix}${projectName}_img__04.png`
         },
+
         {
             name: 'Product Photography',
-            image: `${imagePrefix}${projectName}_img__05.png`
+            image: `${imagePrefix}${projectName}_img__05.1.png`
+        },
+        {
+            name: 'Mobile Detail Page',
+            image: `${imagePrefix}${projectName}_img__05.2.png`
         },
         {
             name: 'Homepage Animation',

@@ -58,9 +58,9 @@ export default function ProjectBookSluts() {
             />
             
             <ProjectGridContainer>
-                <ProjectRow projects={[content.images[6], content.images[6]]} isBigFirst={true} />
-                <ProjectRow projects={[content.images[7], content.images[8]]} isBigFirst={false} />
-                <ProjectRow projects={[content.images[9], content.images[10]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[6], content.images[7]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[8], content.images[9]]} isBigFirst={false} />
+                <ProjectRow projects={[content.images[10], content.images[11]]} isBigFirst={true} />
             </ProjectGridContainer>
             
             <IndentedText 
@@ -69,8 +69,8 @@ export default function ProjectBookSluts() {
             />
 
             <ProjectGridContainer>
-                <ProjectRow projects={[content.images[11], content.images[12]]} isBigFirst={true} />
-                <ProjectRow projects={[content.images[13], content.images[14]]} isBigFirst={false} />
+                <ProjectRow projects={[content.images[12], content.images[13]]} isBigFirst={true} />
+                <ProjectRow projects={[content.images[14], content.images[15]]} isBigFirst={false} />
             </ProjectGridContainer>
             
             <Footer />

@@ -1,3 +1,5 @@
+"use client"
+
 import Script from "next/script";
 import localFont from 'next/font/local'
 
@@ -8,6 +10,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import SmoothScroller from "@/lib/smoothScroller";
 import Lenify from "@/components/Scroller/lenis-provider";
+import { ReactLocoScrollProvider } from "@/lib/contexts/ReactLocomotiveScrollProvider";
 // import { LenisScroller } from '@/components/Scroller/lenis-scroller'
 
 
@@ -27,10 +30,10 @@ const roobert = localFont({
   variable: '--font-roobert',
 })
 
-export const metadata = {
-  title: 'Nich | Product Designer',
-  description: 'Product Designer and Developer from Toronto, CA',
-}
+// export const metadata = {
+//   title: 'Nich | Product Designer',
+//   description: 'Product Designer and Developer from Toronto, CA',
+// }
 
 
 export default function RootLayout({ children }) {
@@ -56,8 +59,13 @@ export default function RootLayout({ children }) {
             __html: setInitialTheme,
           }}
         />
-        <Navigation />
-        {children}
+        {/* <ReactLocoScrollProvider> */}
+          <Navigation />
+          {children}
+
+        {/* </ReactLocoScrollProvider> */}
+        {/* <main data-scroll-container className="container">
+        </main> */}
         {/* <Footer /> */}
         {/* <Preloader /> */}
         {/* <SmoothScroller /> */}

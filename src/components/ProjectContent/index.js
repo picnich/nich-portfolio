@@ -66,6 +66,7 @@ export const ProjectImage = ({ project }) => {
                     alt={`Thumbnail for ${project.projectName}'s project`}
                     fill={true}
                     style={imageStyle}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 1200px"
                     className={`${styles.project__item__mainImage} project__img`}
                 />
             </div>

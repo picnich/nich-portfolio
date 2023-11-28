@@ -47,7 +47,11 @@ export const content = {
         
         {
             name: 'Webpage Highlights',
-            image: `${imagePrefix}${projectName}_img__07.png`
+            image: `${imagePrefix}${projectName}_img__7.1.png`
+        },
+        {
+            name: 'Webpage Highlights',
+            image: `${imagePrefix}${projectName}_img__7.2.png`
         },
         {
             name: 'Section breakdown',
