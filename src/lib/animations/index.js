@@ -11,7 +11,7 @@ export const SplitAndEnterText = (text) => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: text, 
-            toggleActions: "restart restart none none"
+            toggleActions: "restart reset restart reset"
         }, 
         paused: true
     })

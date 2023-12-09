@@ -20,7 +20,9 @@
 
     }
 }
-
+.line {
+    overflow-y: hidden;
+}
 .showcaseGrid {
     &__row_1 {
         display: grid;
@@ -65,14 +67,25 @@
         min-height: 520px;
         position: relative;
         margin-bottom: 1.5rem;
+        overflow: hidden;
 
         img {
             object-fit: cover;
+            // opacity: 0;
+            transition: transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.02);
+            }
         }
     }
 
     &__container {
         max-width: 640px;
+        transition: opacity 0.3s ease-in-out;
+        &:hover {
+            opacity: 0.5;
+        }
 
         h2 {
             font-weight: bold;
