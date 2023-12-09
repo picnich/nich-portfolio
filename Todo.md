@@ -21,23 +21,22 @@ Other:
 - [x] Lenis Scroll
 - [x] Page Transition from Detail pages
 - [x] Navigation
-- [] Include Server code in /Work/* and move 3 pieces of work into Project
-- [] Delete old images/projects 
+- [x] Include Server code in /Work/* and move 3 pieces of work into Project
+- [x] Delete old images/projects 
 
 
 
 Design
 - [] Work Signed in page 
 - [] DETAIL PAGES: PRODUCT
-    - The Bach   
-    - Driveway   
-    - PFF   
-    - Katch
-    - Mindbloom
+    - [] The Bach   
+    - [x] Driveway   
+    - [] PFF   
+    - [] Katch
+    - [x] Mindbloom
 - [] DETAIL PAGES: VISUAL
-    - Arist
-    - Bitwave
-    - Nixtla.io
-    - Hello Walnut
-    - Bolder
-    - Whalesync
+    - [] Arist
+    - [] Bitwave
+    - [x] Hello Walnut
+    - [x] Bolder
+    - [x] Whalesync

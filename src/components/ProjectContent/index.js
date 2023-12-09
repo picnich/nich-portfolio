@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 
@@ -28,6 +29,14 @@ export const ProjectRow = ({ projects, isBigFirst = true }) => {
             <ProjectImage project={projects[1]} />
         </div>
 
+    )
+}
+
+export const ProjectRowSingle = ({ project }) => {
+    return (
+        <div className={styles.row__single}>
+            <ProjectImage project={project} />
+        </div>
     )
 }
 

@@ -1,19 +1,12 @@
-// "use client"
-
-// import { useEffect } from 'react'
-
 import { cookies } from 'next/headers'
 
-import { Footer } from '../../components/Footer'
-import { Navigation } from '../../components/Navigation'
-import { LargeText } from '../../components/LargeText'
-
-import styles from './work.module.scss'
-import { AboutGallery } from '@/components/AboutGallery'
-import { WorkExperience } from '@/components/WorkExperience'
-import { AboutHero } from '@/components/AboutHero'
 import { PasswordPromptDialog } from '@/components/PasswordPromptDialog'
 
+import { ShowcaseHero } from '@/components/ShowcaseHero'
+import { ShowcaseList } from '@/components/ShowcaseList'
+import { Footer } from '../../components/Footer'
+
+import styles from './work.module.scss'
 
 export default function WorkPage() {
 
@@ -26,12 +19,9 @@ export default function WorkPage() {
     } 
  
     return (
-    <main className={styles.main}>
-        {/* <Navigation /> */}
-        <LargeText firstWord={"Work"} secondWord={"Work"}/>
-        <AboutGallery />
-        <AboutHero />
-        <WorkExperience />
+    <main>
+        <ShowcaseHero />
+        <ShowcaseList />
         <Footer />
     </main>
     )

@@ -7,7 +7,7 @@ export const data = [
             "Web Development"
         ], 
         link: "/projects/booksluts",
-        image: "/images/projectCovers/cover_image--booksluts.png"
+        image: "/images/work/booksluts/cover_image--booksluts.png"
     },
     {
         name: "Ryan Gerada", 
@@ -15,7 +15,7 @@ export const data = [
             "Web Development"
         ], 
         link: "/projects/ryan-gerada",
-        image: "/images/projectCovers/cover_image--ryan.png"
+        image: "/images/work/ryan/cover_image--ryan.png"
     },
     {
         name: "Tired Labs", 
@@ -23,7 +23,7 @@ export const data = [
             "Web Development"
         ], 
         link: "/projects/tired",
-        image: "/images/projectCovers/cover_image--tired.png"
+        image: "/images/work/tired/cover_image--tired.png"
     }, 
     {
         name: "Design Portfolio", 

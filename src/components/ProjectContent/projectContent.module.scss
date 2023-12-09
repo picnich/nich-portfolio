@@ -36,15 +36,20 @@
     grid-template-columns: 40% 60%;
     gap: 1rem;
     margin-bottom: 1rem;
-
+    
     @media screen and (max-width: 1068px) {
         grid-template-columns: 50% 50% !important;
     }
-
+    
     
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr !important;
     }
+}
+.row__single {
+    margin-bottom: 1rem;
+    width: 100%;
+    // min-height: 
 }
 
 /* **************
@@ -54,7 +59,7 @@
     width: 100%;
     // min-height: 800px;
     // min-height: clamp(50vw, 25vw, 800px);
-    min-height: 500px;
+    min-height: 520px;
     position: relative;
     
 
