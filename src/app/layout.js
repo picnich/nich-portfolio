@@ -11,6 +11,8 @@ import { Footer } from "@/components/Footer";
 import SmoothScroller from "@/lib/smoothScroller";
 import Lenify from "@/components/Scroller/lenis-provider";
 import { ReactLocoScrollProvider } from "@/lib/contexts/ReactLocomotiveScrollProvider";
+import { Suspense } from "react";
+import { PHProvider, PostHogPageview } from "@/lib/contexts/PostHogProvider";
 // import { LenisScroller } from '@/components/Scroller/lenis-scroller'
 
 
@@ -53,24 +55,29 @@ export default function RootLayout({ children }) {
     `;
   return (
     <html lang="en">
-      <body className={`${roobert.variable} font-sans`}>
-        {/* <Script
-          id="get-theme"
-          dangerouslySetInnerHTML={{
-            __html: setInitialTheme,
-          }}
-        /> */}
-        {/* <ReactLocoScrollProvider> */}
-          <Navigation />
-          {children}
+      <Suspense>
+        <PostHogPageview />
+      </Suspense>
+      <PHProvider>
+        <body className={`${roobert.variable} font-sans`}>
+          {/* <Script
+            id="get-theme"
+            dangerouslySetInnerHTML={{
+              __html: setInitialTheme,
+            }}
+          /> */}
+          {/* <ReactLocoScrollProvider> */}
+            <Navigation />
+            {children}
 
-        {/* </ReactLocoScrollProvider> */}
-        {/* <main data-scroll-container className="container">
-        </main> */}
-        {/* <Footer /> */}
-        {/* <Preloader /> */}
-        {/* <SmoothScroller /> */}
-      </body>
+          {/* </ReactLocoScrollProvider> */}
+          {/* <main data-scroll-container className="container">
+          </main> */}
+          {/* <Footer /> */}
+          {/* <Preloader /> */}
+          {/* <SmoothScroller /> */}
+        </body>
+      </PHProvider>
     </html>
   )
 }
