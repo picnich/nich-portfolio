@@ -9,7 +9,7 @@ Homepage
 
 Work 
 - [x] Logged Out
-- [] Logged In
+- [x] Logged In
 
 Detail Pages
 - [x] Hero 
@@ -27,10 +27,10 @@ Other:
 
 
 Design
-- [] Work Signed in page 
+- [x] Work Signed in page 
 - [] DETAIL PAGES: PRODUCT
     - [] The Bach   
-    - [x] Driveway   
+    - [] Driveway   
     - [] PFF   
     - [] Katch
     - [x] Mindbloom

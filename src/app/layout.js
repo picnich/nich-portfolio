@@ -33,6 +33,7 @@ const roobert = localFont({
 export const metadata = {
   title: 'Nich | Product Designer',
   description: 'Product Designer and Developer from Toronto, CA',
+  metadataBase: new URL("https://nich-portfolio.vercel.app/"),
 }
 
 

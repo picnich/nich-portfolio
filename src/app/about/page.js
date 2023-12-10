@@ -40,4 +40,5 @@ export default function AboutPage() {
 export const metadata = {
   title: 'About | Nich Pereira',
   description: 'Product Designer and Developer from Toronto, CA',
+  metadataBase: new URL("https://nich-portfolio.vercel.app/"),
 }
