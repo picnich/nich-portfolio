@@ -58,7 +58,7 @@ export const enterLegend = ( legend ) => {
         }
     })
     
-    console.log(legendLabels)
+    // console.log(legendLabels)
     tl.from([...legendLabels], {
         opacity: 0,
         yPercent: 100,

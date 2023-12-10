@@ -2,7 +2,7 @@ export const data = [
     {
         name: "Alexei Topounov",
         link: "/work/alexei",
-        image: "/",
+        image: "/images/work/alexei/cover_image--alexei.png",
         summary: "Photography Portfolio",
         tags: [
             "Web Development", "CMS"
@@ -11,7 +11,7 @@ export const data = [
     {
         name: "Arist",
         link: "/work/arist",
-        image: "/",
+        image: "/images/work/arist/cover_image--arist.png",
         summary: "Text-Based E-Learning",
         tags: [
             "Web Design", "Visual Design", "Content Strategy"
@@ -21,7 +21,7 @@ export const data = [
     {
         name: "The Bach",
         link: "/work/bach",
-        image: "/",
+        image: "/images/work/bach/cover_image--bach.png",
         summary: "Bachelor Organization App",
         tags: [
             "Product Design", "Mobile Design"
@@ -31,7 +31,7 @@ export const data = [
     {
         name: "Bitwave",
         link: "/work/bitwave",
-        image: "/",
+        image: "/images/work/bitwave/cover_image--bitwave.png",
         summary: "Enterprise Fintech",
         tags: [
             "Web Design", "Visual Design"
@@ -41,7 +41,7 @@ export const data = [
     {
         name: "Book Sluts",
         link: "/projects/booksluts",
-        image: "/",
+        image: "/images/work/booksluts/cover_image--booksluts.png",
         summary: "Sassy Book Club",
         tags: [
             "Web Design", "Branding", "Web Development"
@@ -50,7 +50,7 @@ export const data = [
     {
         name: "Bolder",
         link: "/work/bolder",
-        image: "/",
+        image: "/images/work/bolder/cover_image--bolder.png",
         summary: "Shopify eCommerce App",
         tags: [
             "Web Design", "Visual Design", "Content Strategy"
@@ -59,7 +59,7 @@ export const data = [
     {
         name: "Driveway",
         link: "/work/driveway",
-        image: "/",
+        image: "/images/work/driveway/cover_image--driveway.png",
         summary: "Screen Walkthrough App",
         tags: [
             "Product Design", "Visual Design"
@@ -69,7 +69,7 @@ export const data = [
     {
         name: "Katch",
         link: "/work/katch",
-        image: "/",
+        image: "/images/work/katch/cover_image--katch.png",
         summary: "Work Communications App",
         tags: [
             "Product Design", "Mobile Design"
@@ -79,7 +79,7 @@ export const data = [
     {
         name: "Mindbloom",
         link: "/work/mindbloom",
-        image: "/",
+        image: "/images/work/mindbloom/cover_image--mindbloom.png",
         summary: "Ketamine Therapy",
         tags: [
             "Product Design", "Mobile Design", "Content Strategy"
@@ -88,7 +88,7 @@ export const data = [
     {
         name: "PFF",
         link: "/work/pff",
-        image: "/",
+        image: "/images/work/pff/cover_image--pff.png",
         summary: "Sports Betting & Fantasy",
         tags: [
             "Product Design", "Mobile Design"
@@ -98,7 +98,7 @@ export const data = [
     {
         name: "Ryan Gerada",
         link: "/projects/ryan-gerada",
-        image: "/",
+        image: "/images/work/ryan/cover_image--ryan.png",
         summary: "Design Portfolio",
         tags: [
             "Web Development", "CMS"
@@ -107,7 +107,7 @@ export const data = [
     {
         name: "Tired",
         link: "/projects/tired",
-        image: "/",
+        image: "/images/work/tired/cover_image--tired.png",
         summary: "Fashion eCommerce",
         tags: [
             "Web Development", "Shopify"
@@ -116,7 +116,7 @@ export const data = [
     {
         name: "Toohla",
         link: "/work/toohla",
-        image: "/",
+        image: "/images/work/toohla/cover_image--toohla.png",
         summary: "Sustainable Living App",
         tags: [
             "Branding", "Web Design"
@@ -125,7 +125,7 @@ export const data = [
     {
         name: "Walnut",
         link: "/work/walnut",
-        image: "/",
+        image: "/images/work/walnut/cover_image--walnut.png",
         summary: "Healthcare Credit Card",
         tags: [
             "Web Design", "Visual Design"
@@ -134,7 +134,7 @@ export const data = [
     {
         name: "Whalesync",
         link: "/work/whalesync",
-        image: "/",
+        image: "/images/work/whalesync/cover_image--whalesync.png",
         summary: "2-Way Data Sync",
         tags: [
             "Web Design", "Visual Design"
