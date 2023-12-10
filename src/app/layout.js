@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import Script from "next/script";
 import localFont from 'next/font/local'
@@ -30,10 +30,10 @@ const roobert = localFont({
   variable: '--font-roobert',
 })
 
-// export const metadata = {
-//   title: 'Nich | Product Designer',
-//   description: 'Product Designer and Developer from Toronto, CA',
-// }
+export const metadata = {
+  title: 'Nich | Product Designer',
+  description: 'Product Designer and Developer from Toronto, CA',
+}
 
 
 export default function RootLayout({ children }) {

@@ -1,6 +1,6 @@
-"use client"
+// "use client"
 
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 
 import { Footer } from '../../components/Footer'
 import { Navigation } from '../../components/Navigation'
@@ -34,4 +34,10 @@ export default function AboutPage() {
       <Footer />
     </main>
   )
+}
+
+
+export const metadata = {
+  title: 'About | Nich Pereira',
+  description: 'Product Designer and Developer from Toronto, CA',
 }
