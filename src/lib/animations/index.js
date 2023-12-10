@@ -7,11 +7,11 @@ gsap.defaults({
     ease: 'expo.out',
 })
 
-export const SplitAndEnterText = (text) => {
+export const SplitAndEnterText = (text, actions = "restart reset restart reset") => {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: text, 
-            toggleActions: "restart reset restart reset"
+            toggleActions: actions
         }, 
         paused: true
     })

@@ -29,13 +29,13 @@ export const AboutBlurb = () => {
                 
                 <h6>About Me</h6>
                 <p ref={para1}>
-                    During my 7+ years in the industry, I’ve worked with early-stage startups in a variety of industries. Through my experience, I’ve been able to help these companies navigate the challenges of launching and scaling their businesses.
+                    During my 7+ years in the industry, I’ve worked with early-stage startups in a variety of industries. Through my experience, I’ve been able to help companies navigate the challenges of launching and scaling their businesses.
                 </p>
                 <p ref={para2}>
                     My passion for developing and designing not only fuels my professional journey but also motivates me to continuously push the boundaries of what's possible in the world of design.
                 </p>
                 <p ref={para3}>
-                    In my free time, I’m either reading for my Book Club, cheering on the Raptors, or (my latest obsession) learning about wine.
+                    In my free time, I’m either reading for my book club, cheering on the Raptors, or (my latest obsession) learning about wine.
                 </p>
             </div>
         </div>

@@ -101,8 +101,8 @@ export const IndentedText = ({ title, content }) => {
     useEffect(() => {
         const context = gsap.context(() => {
             // enterHeadlineAnimation(contentRefs.current)
-            SplitAndEnterText(titleRef.current)
-            SplitAndEnterText(contentRefs.current)
+            SplitAndEnterText(titleRef.current, "restart none none none")
+            SplitAndEnterText(contentRefs.current, "restart none none none")
         })
 
         return () => context.revert()
