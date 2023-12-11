@@ -161,32 +161,37 @@ const WorkItem = ({ project, isLast, imageRefs, handleProjectClick, contentRefs,
     // }
 
     return (
-        <SplideSlide className={`${styles.project} work__item`} onClick={() => handleProjectClick(project)}>
-            <div className={`${styles.project__imgContainer} imgContainer`} ref={i => imageContainerRefs.current.push(i)}>
-                <Image
-                    src={project.image}
-                    alt={`Project thumbnail for ${project.name} project`}
-                    fill={true}
-                    ref={img => imageRefs.current.push(img)}
-                    />
-            </div>
-            <div ref={content => contentRefs.current.push(content)}>
-                <ul className={styles.tags}>
-                    { 
-                        project.tags.map(tag => <div key={tag} className={styles.tag}>{tag}</div>)
-                    }
-                </ul>
-                <div className={styles.name_container}>
-                    <h2>{project.name}</h2>
-                    {
-                        isLast && (
-                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.53333 24L21.3333 11.2V22.6667H24V6.66669H8V9.33335H19.4667L6.66667 22.1334L8.53333 24Z" />
-                            </svg>
-                        )
-                    }
+        <SplideSlide 
+            className={`${styles.project} work__item`} 
+            // onClick={() => handleProjectClick(project)}
+        >
+            <Link href={project.link}>
+                <div className={`${styles.project__imgContainer} imgContainer`} ref={i => imageContainerRefs.current.push(i)}>
+                    <Image
+                        src={project.image}
+                        alt={`Project thumbnail for ${project.name} project`}
+                        fill={true}
+                        ref={img => imageRefs.current.push(img)}
+                        />
                 </div>
-            </div>
+                <div ref={content => contentRefs.current.push(content)}>
+                    <ul className={styles.tags}>
+                        { 
+                            project.tags.map(tag => <div key={tag} className={styles.tag}>{tag}</div>)
+                        }
+                    </ul>
+                    <div className={styles.name_container}>
+                        <h2>{project.name}</h2>
+                        {
+                            isLast && (
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.53333 24L21.3333 11.2V22.6667H24V6.66669H8V9.33335H19.4667L6.66667 22.1334L8.53333 24Z" />
+                                </svg>
+                            )
+                        }
+                    </div>
+                </div>
+            </Link>
         </SplideSlide>
     )
 }

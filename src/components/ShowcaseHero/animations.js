@@ -16,7 +16,7 @@ export const enterFeatured = (container) => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: item,
-                toggleActions: "restart reset restart reset"
+                toggleActions: "restart none none none"
             }
         })
         const image = item.querySelector("img")
@@ -31,7 +31,10 @@ export const enterFeatured = (container) => {
             opacity: 0,
             scale: 1.1,
         })
-        tl.add(SplitAndEnterText(title), "<+=0.5")
+        // tl.add(SplitAndEnterText(title, "restart none none none"), "<+=0.5")
+        tl.from(title, {
+            yPercent: 100,
+        }, "<")
         tl.from(splitPara.words, {
             yPercent: 100,
             stagger: 0.02,
