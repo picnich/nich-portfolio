@@ -1,0 +1,55 @@
+.modalContainer {
+    height: 350px;
+    width: 400px;
+    position: absolute;
+    background-color: white;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    // transform: translate(-50%, -50%);
+    z-index: 1;
+
+
+    .modalSlider {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+        // transform: translateY(-100%);
+        
+        .modal {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            img {
+                object-fit: cover;
+                height: auto;
+            }
+        }
+    }
+}
+
+.cursor, .cursorLabel{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--colour-text);
+    color: var(--colour-bg);;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.cursorLabel{
+    background-color: transparent;
+}

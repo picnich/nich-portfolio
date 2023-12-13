@@ -6,6 +6,7 @@
     max-width: var(--max-width);
     padding-top: 8rem;
     padding-bottom: 8rem;
+    cursor: pointer;
 
     &__legend {
         display: grid;
@@ -27,106 +28,3 @@
         }
     }
 }
-
-.project {
-    display: grid;
-    grid-template-columns: 0.75fr 1.15fr 1fr;
-    align-items: center;
-    border-top: 1px solid var(--colour-text);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    transition: 0.2s ease-in-out opacity;
-    z-index: 1;
-    position:relative;
-    
-    @media screen and (max-width: 1000px) {
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 0.5rem 1rem;
-    }
-    
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-gap: .25rem;
-    }
-
-    &:hover {
-        opacity: 0.5;
-    }
-
-    h3 {
-        font-weight: bold;
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
-        // margin-bottom: .5rem;
-    }
-
-    p {
-        // font-size: clamp(1.5rem, 2.5vw, 2rem);
-        font-size: 1.25rem;
-        line-height: 1.6;
-        font-weight: bold;
-        @media screen and (max-width: 768px) {
-            font-size: 1rem;
-            margin-bottom: 1rem;
-        }
-    }
-
-    ul {
-        display: flex;
-        gap: .5rem;
-        overflow-y: hidden;
-        flex-wrap: wrap;
-        
-        // @media screen and (max-width: 1000px) {
-        //     grid-column-end: 1;
-        //     grid-column-start: 0;
-        // }
-
-
-        li {
-            border-radius: .5rem;
-            padding: .25rem .66rem;
-            // color: var(--colour-text);
-            border: 1px solid var(--colour-text);
-        }
-    }
-}
-
-.project__soon {
-    cursor: progress;
-    * {
-        opacity: 0.2;
-        
-    }
-}
-
-.projectImage {
-    position: fixed;
-    // transform: translate(-50%, -50%);
-    width: 30vw;
-    height: 30vw;
-    touch-action: none;
-    pointer-events: none;
-    left: 0;
-    top: 0;
-    
-    
-    img {
-        object-fit: cover;
-        
-        // Default before Animations;
-        transform: translate(-50%, -50%) rotate(-15deg) scale(0);
-        opacity: 0;
-    }
-}
-
-
-// .projectImages__container {
-//     position: fixed;
-//     overflow: hidden;
-//     top: 0;
-//     left: 0;
-//     width: 100vw;
-//     height: 100vh;
-//     touch-action: none;
-//     pointer-events: none;
-// }
