@@ -19,14 +19,13 @@ export const data = [
         soon: true
     },
     {
-        name: "The Bach",
-        link: "/work/bach",
-        image: "/images/work/bach/cover_image--bach.png",
+        name: "The Batch",
+        link: "/work/batch",
+        image: "/images/work/batch/cover_image--batch.png",
         summary: "Bachelor Organization App",
         tags: [
             "Product Design", "Mobile Design"
         ],
-        soon: true
     },
     {
         name: "Bitwave",
@@ -64,7 +63,6 @@ export const data = [
         tags: [
             "Product Design", "Visual Design"
         ],
-        soon: true
     },
     {
         name: "Katch",
@@ -74,7 +72,6 @@ export const data = [
         tags: [
             "Product Design", "Mobile Design"
         ],
-        soon: true
     },
     {
         name: "Mindbloom",
@@ -93,7 +90,6 @@ export const data = [
         tags: [
             "Product Design", "Mobile Design"
         ],
-        soon: true
     },
     {
         name: "Ryan Gerada",
